@@ -1,6 +1,25 @@
 ﻿// 1.Задайте двумерный массив. 
 // Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
 
+void SortRowsDescending(int[,] array)
+{
+    int row = array.GetLength(0);
+    int column = array.GetLength(1);
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column - 1; j++)
+        {
+            for (int k = j + 1; k < column; k++)
+                {
+                    if (array[i, k] > array[i, j])
+                    {
+                        (array[i, k], array[i, j]) = (array[i, j], array[i, k]);
+                    }
+                }
+        }
+    }
+}
+
 int[,] Random2DArray(int row, int column, int from, int to)
 {
     int[,] array = new int[row, column];
@@ -29,33 +48,14 @@ void Print2DArray(int[,] array)
     Console.WriteLine();
 }
 
-void SortRowsDescending(int[,] array)
-{
-    int row = array.GetLength(0);
-    int column = array.GetLength(1);
-    for (int i = 0; i < row; i++)
-    {
-        for (int j = 0; j < column - 1; j++)
-        {
-            for (int k = j + 1; k < column; k++)
-                {
-                    if (array[i, k] > array[i, j])
-                    {
-                        (array[i, k], array[i, j]) = (array[i, j], array[i, k]);
-                    }
-                }
-        }
-    }
-}
-
 Console.Write("Введите количество строк массива: ");
 int row = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов массива: ");
 int column = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите диапазон значений: ");
-Console.Write("от: ");
+Console.Write("от ");
 int from = int.Parse(Console.ReadLine());
-Console.Write("до: ");
+Console.Write("до ");
 int to = int.Parse(Console.ReadLine());
 int[,] array = Random2DArray(row, column, from, to);
 Print2DArray(array);
