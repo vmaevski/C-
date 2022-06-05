@@ -1,6 +1,32 @@
 ﻿// 3.Задайте две матрицы. напишите программу, которая будет находить
 // произведение двух матриц.
 
+int[,] Multiplication2Arrays(int[,] array1, int[,] array2)
+{
+//    if (array1.GetLength(1) != array2.GetLength(0))
+    // {
+    //     //return ;    ПЕРЕМНОЖАТЬ НЕЛЬЗЯ ! ! ! Как ?????
+    // }
+    // else
+//    {
+        int row = array1.GetLength(0);
+        int column = array2.GetLength(1);
+        int col1row2 = array1.GetLength(1);
+        int[,] arr = new int[row, column];
+        for (int i = 0; i < row; i++)
+        {
+            for (int j = 0; j < column; j++)
+            {
+                for (int k = 0; k < col1row2; k++)
+                {
+                    arr[i,j] += array1[i,k] * array2[k, j];    
+                }
+            }   
+        }
+    return arr;
+//    }
+}
+
 int[,] Random2DArray(int row, int column, int from, int to)
 {
     int[,] array = new int[row, column];
@@ -27,32 +53,6 @@ void Print2DArray(int[,] array)
         Console.WriteLine();
     }
     Console.WriteLine();
-}
-
-int[,] Multiplication2Arrays(int[,] array1, int[,] array2)
-{
-//    if (array1.GetLength(1) != array2.GetLength(0))
-    // {
-    //     //return ;        ! ! ! Как ?????
-    // }
-    // else
-//    {
-        int row = array1.GetLength(0);
-        int column = array2.GetLength(1);
-        int col1row2 = array1.GetLength(1);
-        int[,] arr = new int[row, column];
-        for (int i = 0; i < row; i++)
-        {
-            for (int j = 0; j < column; j++)
-            {
-                for (int k = 0; k < col1row2; k++)
-                {
-                    arr[i,j] += array1[i,k] * array2[k, j];    
-                }
-            }   
-        }
-    return arr;
-//    }
 }
 
 int[,] array1 = Random2DArray(2, 3, 1, 10);
