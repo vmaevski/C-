@@ -55,8 +55,8 @@ void Print2DArray(int[,] array)
     Console.WriteLine();
 }
 
-int[,] array1 = Random2DArray(2, 3, 0, 10);
-int[,] array2 = Random2DArray(3, 2, 0, 10);
+int[,] array1 = Random2DArray(2, 3, 1, 10);
+int[,] array2 = Random2DArray(3, 2, 1, 10);
 Print2DArray(array1);
 Print2DArray(array2);
 int[,] array3 = Multiplication2Arrays(array1, array2);
