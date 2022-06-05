@@ -4,10 +4,10 @@
 int[,] Multiplication2Arrays(int[,] array1, int[,] array2)
 {
 //    if (array1.GetLength(1) != array2.GetLength(0))
-    // {
-    //     //return ;    ПЕРЕМНОЖАТЬ НЕЛЬЗЯ ! ! ! Как ?????
-    // }
-    // else
+//     {
+//         return Console.WriteLine("ПЕРЕМНОЖАТЬ НЕЛЬЗЯ ! ! !");// Как ?????
+//     }
+//     // else
 //    {
         int row = array1.GetLength(0);
         int column = array2.GetLength(1);
@@ -55,8 +55,8 @@ void Print2DArray(int[,] array)
     Console.WriteLine();
 }
 
-int[,] array1 = Random2DArray(2, 3, 1, 10);
-int[,] array2 = Random2DArray(3, 3, 1, 10);
+int[,] array1 = Random2DArray(2, 3, 0, 10);
+int[,] array2 = Random2DArray(3, 2, 0, 10);
 Print2DArray(array1);
 Print2DArray(array2);
 int[,] array3 = Multiplication2Arrays(array1, array2);
