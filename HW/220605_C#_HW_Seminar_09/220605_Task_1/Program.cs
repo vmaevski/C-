@@ -9,4 +9,6 @@
     Console.Write($"{n}, ");
 }
  
-EvenNaturalNumbers(1, 11);
+EvenNaturalNumbers(1, 5);
+Console.WriteLine();
+EvenNaturalNumbers(4, 8);
