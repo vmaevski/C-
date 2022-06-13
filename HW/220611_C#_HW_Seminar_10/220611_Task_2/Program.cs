@@ -37,7 +37,6 @@ void Fill3DArrayWithUniqueRandom2DigitNumbers(int[,,] array)
     int[] arrNum = new int[x * y * z];
     UniqueRandom2DigitNumbers(arrNum, x * y * z);
     int iArrNum = 0;
-
     for (int i = 0; i < x; i++)
     {
         for (int j = 0; j < y; j++)
@@ -70,7 +69,6 @@ void Print3DArrayWithIndex(int[,,] array)
     }
     Console.WriteLine();
 }
-
 
 Console.WriteLine("Задайте размерность массива (M x N x K):");
 Console.Write("M = ");
